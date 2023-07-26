@@ -3,7 +3,7 @@
 ## installing:
 
 - git clone https://github.com/f4r6d/part.git
-- cd farshid.gholizadeh
+- cd part
 - pip install -r requirement.txt
 - cd partsoft
 - mv .env.sample .env
