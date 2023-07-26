@@ -2,7 +2,7 @@
 
 ## installing:
 
-- git clone https://igit.partdp.ir/estekhdam/interview/offline/backend/farshid.gholizadeh.git
+- git clone https://github.com/f4r6d/part.git
 - cd farshid.gholizadeh
 - pip install -r requirement.txt
 - cd partsoft
