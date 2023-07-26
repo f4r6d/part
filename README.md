@@ -21,5 +21,5 @@
 
 
 Deployed version: [http://partsoft.pythonanywhere.com/](http://partsoft.pythonanywhere.com/
-)http://partsoft.pythonanywhere.com/
+)
 
