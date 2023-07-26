@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}User Form{% endblock %}
+
+{% block content %}
+
+<p>{{ data }}</p>
+
+<h2>Register Form:</h2><br>
+
+<form method="post" action="/register/">{% csrf_token %}
+    username:
+    <input type="text" name="username" class="form-control"><br>
+    email:
+    <input type="email" name="email" class="form-control"><br>
+    password:
+    <input type="password" name="password" class="form-control"><br>
+
+
+    <input type="submit" value="Register" class="btn btn-block">
+</form>
+
+{% endblock %}

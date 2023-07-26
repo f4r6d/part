@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}User:{{ member.username|upper }}{% endblock %}
+
+{% block content %}
+
+<div class="card">
+    <h5 class="card-header">{{ member.username|upper }}</h5>
+    <div class="card-body">
+        <h5 class="card-title">Email: {{ member.email }}</h5>
+         <p class="card-text">First Name: {{ member.firstname }}</p>
+         <p class="card-text">Last Name: {{ member.lastname }}</p>
+         <p class="card-text">User Role: {{ member.role }}</p>
+        <a href="{% url 'member:members.edit' member.id %}" class="btn btn-primary">Edit</a>
+        <a href="{% url 'member:members.delete' member.id %}" class="btn btn-danger" onclick="return confirm('Delete?');">Delete</a>
+    </div>
+</div>
+
+{% endblock %}

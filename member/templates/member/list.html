@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}User List{% endblock %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for member in members %}
+        <tr>
+            <td><a href="{% url 'member:members.show' member.id %}">{{ member.username }}</a></td>
+            <td>{{ member.email }}</td>
+            <td>
+                <a href="{% url 'member:members.delete' member.id %}" class="btn btn-danger" onclick="return confirm('Delete?');">Delete</a>
+                <a href="{% url 'member:members.edit' member.id %}" class="btn btn-primary">Edit</a>
+                
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

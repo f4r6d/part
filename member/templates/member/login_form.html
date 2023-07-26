@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}User Form{% endblock %}
+
+{% block content %}
+
+<p>{{ data }}</p>
+
+<h2>Login Form:</h2><br>
+
+<form method="post" action="/login/">{% csrf_token %}
+    username:
+    <input type="text" name="username" class="form-control"><br>
+    password:
+    <input type="password" name="password" class="form-control"><br>
+    captcha:
+    <input type="text" name="cap" class="form-control" autocomplete="false"><br>
+
+    {% load static %}
+    <img src="{% static cap_image %}" alt="reCaptcha image">    <br><br>
+
+    <input type="submit" value="Login" class="btn btn-block">
+</form>
+
+{% endblock %}
