@@ -18,3 +18,8 @@
 ### for using django admin site: python3 manage.py createsuperuser
 
 #### in django admin site you can edit and view site members and add user to database manually
+
+
+Deployed version: [http://partsoft.pythonanywhere.com/](http://partsoft.pythonanywhere.com/
+)http://partsoft.pythonanywhere.com/
+
